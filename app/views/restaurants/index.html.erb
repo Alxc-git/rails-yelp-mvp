@@ -1,11 +1,14 @@
-<h1>All the restaurants ! </h1>
 
-<ul>
-<% @restaurants.each do |restaurant| %>
-  <li>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %>
-  </li>
-<% end %>
-</ul>
+<div class="container mt-3">
+  <h1>All the restaurants ! </h1>
 
-<%= link_to "Add new restaurants", new_restaurant_path %>
+  <ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= link_to restaurant.name, restaurant_path(restaurant), class:  "text-decoration-none" %>
+    </li>
+  <% end %>
+  </ul>
+
+  <%= link_to "Add new restaurants", new_restaurant_path, class: "btn btn-outline-primary"%>
+</div>
